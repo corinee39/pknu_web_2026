@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>데이터 수집 폼</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 20px;
+        min-height: 100vh;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: linear-gradient(135deg, #f8f4ff 0%, #efe6ff 100%);
+        color: #4b3f63;
+      }
+
+      h1 {
+        margin: 0 0 10px 0;
+        color: #6f5ab6;
+        font-size: 32px;
+        text-align: center;
+      }
+
+      a {
+        display: inline-block;
+        margin-bottom: 18px;
+        color: #7a63c7;
+        text-decoration: none;
+        font-weight: 600;
+        background-color: #f3ecff;
+        padding: 8px 14px;
+        border-radius: 999px;
+        transition: 0.2s;
+      }
+
+      a:hover {
+        background-color: #e6dbff;
+      }
+
+      form {
+        width: 100%;
+        max-width: 640px;
+        margin: 0 auto;
+        background: #ffffffcc;
+        backdrop-filter: blur(8px);
+        border: 1px solid #eadfff;
+        border-radius: 24px;
+        padding: 32px 28px;
+        box-shadow: 0 18px 40px rgba(124, 99, 199, 0.14);
+      }
+
+      hr {
+        border: none;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #dccdff,
+          transparent
+        );
+        margin: 22px 0;
+      }
+
+      input[type="text"],
+      input[type="number"] {
+        width: 100%;
+        margin-top: 8px;
+        margin-bottom: 12px;
+        padding: 12px 14px;
+        border: 1px solid #d9c8ff;
+        border-radius: 14px;
+        background-color: #fcfaff;
+        color: #4b3f63;
+        font-size: 15px;
+        transition: 0.2s;
+      }
+
+      input[type="text"]:focus,
+      input[type="number"]:focus {
+        outline: none;
+        border-color: #a58cff;
+        box-shadow: 0 0 0 4px rgba(165, 140, 255, 0.18);
+        background-color: #ffffff;
+      }
+
+      input[type="checkbox"],
+      input[type="radio"] {
+        accent-color: #9a7dff;
+        transform: scale(1.08);
+        margin-left: 6px;
+        margin-right: 6px;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 14px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 14px;
+        margin-right: 10px;
+        transition: 0.2s;
+      }
+
+      input[type="submit"] {
+        background: linear-gradient(135deg, #b197fc, #8f75f5);
+        color: white;
+        box-shadow: 0 10px 20px rgba(143, 117, 245, 0.25);
+      }
+
+      input[type="submit"]:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 24px rgba(143, 117, 245, 0.32);
+      }
+
+      input[type="reset"] {
+        background-color: #efe6ff;
+        color: #6a57a8;
+        border: 1px solid #ddd0ff;
+      }
+
+      input[type="reset"]:hover {
+        background-color: #e6dbff;
+      }
+
+      @media (max-width: 640px) {
+        body {
+          padding: 20px 14px;
+        }
+
+        form {
+          padding: 24px 18px;
+          border-radius: 20px;
+        }
+
+        h1 {
+          font-size: 26px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      action="https://docs.google.com/forms/u/0/d/e/14203FAIpQLSd1I-tJEcoTALqkqf6l6_YpyBTqUJ-xhheRlN69inG7-wYdSw/formResponse"
+      method="GET"
+    >
+      <h1>Input 기능</h1>
+      <hr />
+      <a href="index.html">홈으로</a>
+      <br />
+
+      First name : <input type="text" name="entry.1428436543" /><br />
+      Last name : <input type="text" name="entry.674400231" /><br />
+      Age :
+      <input
+        type="number"
+        min="1"
+        max="99"
+        value=""
+        step="1"
+        name="entry.1444704739"
+      />
+      <hr />
+      아침식사 밥? :
+      <input
+        type="checkbox"
+        name="entry.915108037"
+        value="밥을 먹는다."
+        id=""
+      /><br />
+      아침식사 빵? :
+      <input
+        type="checkbox"
+        name="entry.915108037"
+        value="빵을 먹는다."
+        id=""
+      />
+      <hr />
+      학생인가요?: <br />
+      예<input type="radio" name="entry.1273254017" value="예" id="" />
+      아니오<input type="radio" name="entry.1273254017" value="아니오" id="" />
+      <hr />
+      공부 잘하나요? <br />
+      잘해요:
+      <input type="radio" name="entry.1423155769" value="잘해요" id="" />
+      보통이요:
+      <input type="radio" name="entry.1423155769" value="보통이요" id="" />
+      <br />
+      <input type="submit" />
+      <input type="reset" />
+    </form>
+  </body>
+</html>
