@@ -14,10 +14,11 @@
       <legend>전송테스트</legend>
 
       <!-- form>(input+br)*3+div>em{패턴에 맞출것} -->
-      <form action="">
-        ID : <input type="text" required /><br />
+      <form action="#">
+        ID :
+        <input type="text" pattern="010-[0-9]{3,4}-[0-9]{4}" required /><br />
         PW : <input type="password" required /><br />
-        Etc : <input type="text" /><br />
+        Etc : <input type="text" value="readonly" readonly /><br />
         <input type="submit" value="전송" /><br />
         <div><em>패턴에 맞출것</em></div>
       </form>
