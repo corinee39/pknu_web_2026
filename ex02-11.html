@@ -15,6 +15,22 @@
         width: 100px;
         height: 70px;
       }
+      #row-line,
+      #col-line {
+        background-color: yellowgreen;
+      }
+      .lines1 {
+        color: red;
+      }
+      .lines2 {
+        color: green;
+      }
+      #lines3 {
+        background-color: yellow;
+      }
+      .bottom-lines {
+        color: orange;
+      }
     </style>
   </head>
   <body>
@@ -35,25 +51,23 @@
         <th>Line 5</th>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>1행 1열</td>
+        <td class="lines1">1행 2열</td>
+        <td class="lines1">1행 3열</td>
+        <td class="lines1, lines2">1행 4열</td>
+        <td rowspan="2" id="row-line">1행 5열</td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>2행 1열</td>
+        <td colspan="2" id="col-line">2행 2열</td>
+        <td class="lines2">2행 3열</td>
       </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+      <tr class="bottom-lines">
+        <td>3행 1열</td>
+        <td>3행 2열</td>
+        <td id="lines3">3행 3열</td>
+        <td class="lines2" id="lines3">3행 4열</td>
+        <td id="lines3">3행 5열</td>
       </tr>
     </table>
   </body>
