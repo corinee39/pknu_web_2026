@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background</title>
+    <style>
+      div {
+        width: 400px;
+        height: 250px;
+        border: 20px solid #ccc;
+        padding: 20px;
+        margin-bottom: 20px;
+        background: url(./sample_data/sample_timemoney.png) no-repeat top
+          right / 30%;
+      }
+      #bg1 {
+        background-origin: padding-box;
+      }
+      #bg2 {
+        background-origin: content-box;
+      }
+      #bg3 {
+        background-origin: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>background</h1>
+    <hr />
+    <a href="index.html">홈으로</a><br />
+
+    <!-- (div#bg$>h2{행복을 위해서라면}+h3{시간을 벌자, 돈도 벌고}+p)*3 -->
+    <div id="bg1">
+      <h2>행복을 위해서라면</h2>
+      <h3>시간을 벌자, 돈도 벌고</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quas atque
+        porro obcaecati! Explicabo quis voluptatibus repellendus iure. Labore,
+        pariatur fuga? Similique dolores consequuntur nemo.
+      </p>
+    </div>
+    <div id="bg2">
+      <h2>행복을 위해서라면</h2>
+      <h3>시간을 벌자, 돈도 벌고</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum aliquid
+        minima blanditiis, dolore eligendi, laboriosam labore quam in, ipsa
+        voluptatem eos voluptatibus odio quasi impedit!
+      </p>
+    </div>
+    <div id="bg3">
+      <h2>행복을 위해서라면</h2>
+      <h3>시간을 벌자, 돈도 벌고</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+        obcaecati magni iusto ex, at provident beatae quia vitae nulla
+        voluptatibus tenetur eligendi eveniet. Maxime, ut.
+      </p>
+    </div>
+  </body>
+</html>
