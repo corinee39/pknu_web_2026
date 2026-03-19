@@ -1,68 +1,175 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTML 실습</title>
+    <style>
+      body {
+        margin: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f7fbff;
+        color: #333;
+      }
+
+      h1 {
+        color: white;
+        background: cadetblue;
+        padding: 14px 18px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+        margin-bottom: 14px;
+      }
+
+      hr {
+        border: none;
+        height: 1px;
+        background-color: #cfdceb;
+        margin-bottom: 20px;
+      }
+
+      .table-wrap {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        min-width: 900px;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      thead {
+        font-size: 1.15rem;
+        background-color: #bfddff;
+      }
+
+      th,
+      td {
+        border: 1.5px solid black;
+      }
+
+      th {
+        height: 30px;
+        padding: 8px;
+        color: #1f2d3d;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      td {
+        background-color: #f4fbff;
+        vertical-align: top;
+        padding: 3px;
+        line-height: 1.7;
+      }
+
+      a {
+        text-decoration: none;
+        color: #2f3b52;
+        display: inline-block;
+      }
+
+      a:visited {
+        color: #7a3c92;
+      }
+
+      a:hover {
+        color: #575757;
+        transform: translateX(2px);
+      }
+    </style>
   </head>
   <body>
-    <h1 style="color: aliceblue; background-color: cadetblue; padding: 10px">
-      HTML 실습
-    </h1>
+    <h1>PKNU 2026_HTML 실습</h1>
     <hr />
-    <h2>1일차</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>1일차</th>
+            <th>2일차</th>
+            <th>3일차</th>
+            <th>4일차</th>
+            <th>5일차</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="ex01-01.html">예제1_헤딩태그</a><br />
+              <a href="ex01-02.html">예제2_하이퍼링크</a><br />
+              <a href="ex01-03.html">예제3_띄어쓰기/p,div,span/lorem</a><br />
+              <a href="ex01-04.html">예제4_자주 쓰는 태그와 특징</a><br />
+              <a href="ex01-05.html">예제5_시멘틱 레이아웃</a><br />
+              <a href="ex01-06.html">예제6_시멘틱 태그</a><br />
+              <a href="ex01-07.html">예제7_문서 내 링크</a><br />
+            </td>
+            <td>
+              <a href="ex02-01.html">예제1_데이터 수집 폼</a><br />
+              <a href="ex02-02.html">예제2_Input 응용</a><br />
+              <a href="ex02-03.html">예제3_패턴테스트</a><br />
+              <a href="ex02-04.html">예제4_리스트 정리</a><br />
+              <a href="ex02-05.html">예제5_리스트 응용</a><br />
+              <a href="ex02-06.html">예제6_연습문제</a><br />
+              <a href="ex02-07.html">예제7_리스트 응용</a><br />
+              <a href="ex02-08.html">예제8_정의리스트</a><br />
+              <a href="ex02-09.html">예제9_비디오/오디오/PDF</a><br />
+              <a href="ex02-10.html">예제10_표구조</a><br />
+              <a href="ex02-11.html">예제11_표구조 응용</a><br />
+            </td>
+            <td>
+              <a href="ex03-01.html">예제1_표구조 응용</a><br />
+              <a href="ex03-02.html">예제2_테이블 응용</a><br />
+              <a href="ex03-03.html">예제3_태그 그외</a><br />
+              <a href="ex03-04.html">예제4_CSS 외부 스타일 시트</a><br />
+              <a href="ex03-05.html">예제5_div 응용</a><br />
+              <a href="ex03-06.html">예제6_선택자 id, class</a><br />
+              <a href="ex03-07.html">예제7_복합선택자</a><br />
+              <a href="ex03-08.html">예제8_자식선택자</a><br />
+              <a href="ex03-09.html">예제9_인접선택자</a><br />
+              <a href="ex03-10.html">예제10_형제선택자</a><br />
+              <a href="ex03-11.html">예제11_CDN, 구글폰트</a><br />
+            </td>
+            <td>
+              <a href="ex04-01.html">예제1_속성선택자</a><br />
+              <a href="ex04-02.html">예제2_가상선택자 응용</a><br />
+              <a href="ex04-03.html">예제3_미니멀페이지</a><br />
+              <a href="ex04-04.html">예제4_폰트</a><br />
+              <a href="ex04-05.html">예제5_텍스트 정렬</a><br />
+              <a href="ex04-06.html">예제6_줄간격</a><br />
+              <a href="ex04-07.html">예제7_text-decoration</a><br />
+              <a href="ex04-08.html">예제8_text-shadow</a><br />
+              <a href="ex04-09.html">예제9_border-box</a><br />
+              <a href="ex04-10.html">예제10_background</a><br />
+              <a href="ex04-11.html">예제11_border</a><br />
+              <a href="ex04-12.html">예제12_box position</a><br />
+              <a href="ex04-13.html">예제13_프사 만들기</a><br />
+              <a href="ex04-14.html">예제14_position</a><br />
+              <a href="ex04-15.html">예제15_float</a><br />
+              <a href="ex04-16.html">예제16_리스트 응용</a><br />
+              <a href="ex04-17.html">예제17_background</a><br />
+            </td>
+            <td>
+              <a href="ex05-01.html">예제1_background(네이버아이콘)</a><br />
+              <a href="ex05-02.html">예제2_position fixed</a><br />
+              <a href="ex05-03.html">예제3_가운데 정렬</a><br />
+              <a href="ex05-04.html">예제4_float 응용(레이아웃)</a><br />
+              <a href="ex05-05.html">예제5_원형그라데이션</a><br />
+              <a href="ex05-06.html">예제6_구조적 가상클래스</a><br />
+              <a href="ex05-07.html">예제7_가상클래스</a><br />
+              <a href="ex05-08.html">예제8_가상요소선택자</a><br />
+              <a href="ex05-09.html">예제9_메뉴만들기</a><br />
+              <a href="ex05-10.html">예제10_달력</a><br />
+              <a href="ex05-10a.html">실습_달력 응용</a><br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <!-- (a[href="ex01-0$.html"]{예제$}br)*7 -->
-    <a href="ex01-01.html">예제1_헤딩태그</a><br />
-    <a href="ex01-02.html">예제2_하이퍼링크</a><br />
-    <a href="ex01-03.html">예제3_띄어쓰기/p,div,span/lorem</a><br />
-    <a href="ex01-04.html">예제4_자주 쓰는 태그와 특징</a><br />
-    <a href="ex01-05.html">예제5_시멘틱 레이아웃</a><br />
-    <a href="ex01-06.html">예제6_시멘틱 태그</a><br />
-    <a href="ex01-07.html">예제7_문서 내 링크</a><br />
-
-    <h2>2일차</h2>
-    <a href="ex02-01.html">예제1_데이터 수집 폼</a><br />
-    <a href="ex02-02.html">예제2_Input 응용</a><br />
-    <a href="ex02-03.html">예제3_패턴테스트</a><br />
-    <a href="ex02-04.html">예제4_리스트 정리</a><br />
-    <a href="ex02-05.html">예제5_리스트 응용</a><br />
-    <a href="ex02-06.html">예제6_연습문제</a><br />
-    <a href="ex02-07.html">예제7_리스트 응용</a><br />
-    <a href="ex02-08.html">예제8_정의리스트</a><br />
-    <a href="ex02-09.html">예제9_비디오/오디오/PDF</a><br />
-    <a href="ex02-10.html">예제10_표구조</a><br />
-    <a href="ex02-11.html">예제11_표구조 응용</a><br />
-
-    <h2>3일차</h2>
-    <a href="ex03-01.html">예제1_표구조 응용</a><br />
-    <a href="ex03-02.html">예제2_테이블 응용</a><br />
-    <a href="ex03-03.html">예제3_태그 그외</a><br />
-    <a href="ex03-04.html">예제4_CSS 외부 스타일 시트</a><br />
-    <a href="ex03-05.html">예제5_div 응용</a><br />
-    <a href="ex03-06.html">예제6_선택자 id, class</a><br />
-    <a href="ex03-07.html">예제7_복합선택자</a><br />
-    <a href="ex03-08.html">예제8_자식선택자</a><br />
-    <a href="ex03-09.html">예제9_인접선택자</a><br />
-    <a href="ex03-10.html">예제10_형제선택자</a><br />
-    <a href="ex03-11.html">예제11_CDN, 구글폰트</a><br />
-
-    <h2>4일차</h2>
-    <a href="ex04-01.html">예제1_속성선택자</a><br />
-    <a href="ex04-02.html">예제2_가상선택자 응용</a><br />
-    <a href="ex04-03.html">예제3_미니멀페이지</a><br />
-    <a href="ex04-04.html">예제4_폰트</a><br />
-    <a href="ex04-05.html">예제5_텍스트 정렬</a><br />
-    <a href="ex04-06.html">예제6_줄간격</a><br />
-    <a href="ex04-07.html">예제7_text-decoration</a><br />
-    <a href="ex04-08.html">예제8_text-shadow</a><br />
-    <a href="ex04-09.html">예제9_border-box</a><br />
-    <a href="ex04-10.html">예제10_background</a><br />
-    <a href="ex04-11.html">예제11_border</a><br />
-    <a href="ex04-12.html">예제12_box position</a><br />
-    <a href="ex04-13.html">예제13_프사 만들기</a><br />
-    <a href="ex04-14.html">예제14_position</a><br />
-    <a href="ex04-15.html">예제15_float</a><br />
-    <a href="ex04-16.html">예제16_리스트 응용</a><br />
-    <a href="ex04-17.html">예제17_background</a><br />
   </body>
 </html>
