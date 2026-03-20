@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 실습</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+      }
+      .nav {
+        display: flex;
+        height: 5%;
+        background-color: rgb(255, 235, 55);
+        justify-content: center;
+        align-items: center;
+      }
+      .header,
+      .footer {
+        display: flex;
+        height: 10%;
+        background-color: cadetblue;
+        justify-content: center;
+        align-items: center;
+      }
+      .header {
+        font-size: 2rem;
+      }
+      .box {
+        display: flex;
+        width: 100%;
+        height: 60%;
+      }
+      .aside,
+      .section {
+        width: 15%;
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .article {
+        width: 70%;
+        background-color: coral;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flex box 레이아웃 실습</h1>
+    <hr />
+    <a href="index.html">🏠홈으로</a><br />
+
+    <div class="container">
+      <div class="header">Never</div>
+      <div class="nav">nav</div>
+      <div class="box">
+        <div class="aside">aside</div>
+        <div class="article">article</div>
+        <div class="section">section</div>
+      </div>
+
+      <div class="footer">정보처리방침 정책고객센터 Never corp.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .box {
+        background-color: rgb(243, 222, 255);
+        height: 100vh;
+        padding-top: 8rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+      }
+
+      .card {
+        background-color: white;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        overflow: hidden;
+      }
+
+      .banner {
+        background-image: url(https://image.utoimage.com/preview/cp924216/2021/08/202108004244_500.jpg);
+        background-size: cover;
+        height: 140px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .profile {
+        background-image: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNjAxMjFfNTcg%2FMDAxNzY4OTU0MzEwMDgz.BRxhTp7xB4P_aNzU9uUE0UFB89KpnoByts5x1ke9v0sg.Xy1zBrqAgEQWTvnK9PQzYdbS-NSZFjGJFP6fvdWHNP8g.PNG%2Fimage.png&type=sc960_832);
+        background-size: 140px;
+        background-position: -5px -1px;
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.7);
+        transform: translateY(60%);
+        transition: transform 0.4s ease;
+      }
+
+      .profile:hover {
+        transform: translateY(60%) scale(1.1);
+      }
+
+      .name {
+        text-align: center;
+        padding-top: 60px;
+      }
+
+      .follow-btn {
+      }
+    </style>
+  </head>
+  <body>
+    <h1>프로필</h1>
+    <hr />
+    <a href="index.html">🏠홈으로</a><br />
+
+    <!-- div.card>div.banner>div.profile^h2.name{Sinyoung}+div.follow-btn{Follow}+div.desc{내용들...} -->
+    <div class="box">
+      <div class="card">
+        <div class="banner">
+          <div class="profile"></div>
+        </div>
+        <h2 class="name">Sinyoung</h2>
+        <div class="follow-btn">Follow</div>
+        <div class="desc">
+          뭐든 다 잘하는 성장형 코린이가 될거야 노력과 성장은 나의 특기다
+          하하하핫
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

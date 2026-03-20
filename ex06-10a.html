@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      div {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: rgb(210, 161, 255);
+        animation: circlemove 1s ease-in infinite alternate;
+      }
+      @keyframes circlemove {
+        0% {
+          transform: translate(0);
+        }
+        98% {
+          width: 74px;
+          height: 66px;
+        }
+        100% {
+          transform: translate(0, 400px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>동그라미 탱</h1>
+    <hr />
+    <a href="index.html">🏠홈으로</a><br />
+    <div></div>
+  </body>
+</html>
