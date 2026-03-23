@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>간단한 쇼핑몰</title>
+    <style>
+      h1 {
+        width: 100%;
+        text-align: center;
+        background-color: rgb(130, 54, 153);
+        color: white;
+        position: fixed;
+        top: 10px;
+        border-radius: 10px;
+        padding: 5px;
+        margin-top: 20px;
+      }
+      /* h2 {
+        color: #777;
+        text-align: center;
+      } */
+      ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: flex-start; */
+        justify-content: space-evenly;
+        margin-top: 60px;
+      }
+      li {
+        width: 300px;
+        height: 200px;
+        padding: 15px;
+        border: 1px solid #aaa;
+        border-radius: 10px;
+        margin: 10px;
+        background-color: rgb(255, 249, 242);
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .caption {
+        background-color: rgba(0, 0, 0, 0.507);
+        color: white;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        transition: all 0.5s ease;
+        opacity: 0;
+      }
+      li:hover .caption {
+        transform: translateY(-205px);
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html">🏠홈으로</a><br />
+    <!-- div.box>h1{신상품 목록}+ul>   (li>img+div.caption>  h2{상품$}  +p{상품$ 설명 텍스트}   +p{가격: 1$,12$원})*9 -->
+    <div class="box">
+      <h1>신상품 목록</h1>
+      <ul>
+        <li>
+          <img
+            src="https://static.dailytrend.co.kr/wp-content/uploads/2024/12/29154822/59b83ccd738ca877606ad2bab0146ec72ff52087-1280x1024-1.webp"
+            alt="의류사진1"
+          />
+          <div class="caption">
+            <h2>상품1</h2>
+            <p>상품1 설명 텍스트</p>
+            <p>가격: 11,121원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://d3ha2047wt6x28.cloudfront.net/fvws2iey0f0/pr:GOODS_DETAIL/czM6Ly9hYmx5LWltYWdlLWxlZ2FjeS9kYXRhL2dvb2RzLzIwMjIwOTEyXzE2NjI5ODMzNzIzMjgzMjRtLmpwZw"
+            alt="의류사진2"
+          />
+          <div class="caption">
+            <h2>상품2</h2>
+            <p>상품2 설명 텍스트</p>
+            <p>가격: 12,122원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://godomall-storage.cdn-nhncommerce.com/31008e0de48eed65aef1f79c6036ada3/goods/1000000341/image/detail/1000000341_detail_023.jpg"
+            alt="의류사진3"
+          />
+          <div class="caption">
+            <h2>상품3</h2>
+            <p>상품3 설명 텍스트</p>
+            <p>가격: 13,123원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/34a7/c5ad4c190d8093b6a8bbfe01334ffb5f09882a4455101c245f2f30b7b6e8.jpg"
+            alt="의류사진4"
+          />
+          <div class="caption">
+            <h2>상품4</h2>
+            <p>상품4 설명 텍스트</p>
+            <p>가격: 14,124원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://imagecdn.dpon.gift/images/merchandises/%E1%84%8E%E1%85%AE%E1%86%AB%E1%84%89%E1%85%B5%E1%86%A8%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%87%E1%85%B5%E1%84%91%E1%85%B5%E1%86%AF%E1%84%85%E1%85%A9%E1%84%8B%E1%85%AE%E1%84%8B%E1%85%B5%E1%86%AB%E1%84%92%E1%85%A7%E1%86%BC_s2.jpg"
+            alt="의류사진5"
+          />
+          <div class="caption">
+            <h2>상품5</h2>
+            <p>상품5 설명 텍스트</p>
+            <p>가격: 15,125원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://m.ezendolls.com/web/product/big/202105/ae036dc57b60ecc696e38bf0eaf1376c.jpg"
+            alt="의류사진6"
+          />
+          <div class="caption">
+            <h2>상품6</h2>
+            <p>상품6 설명 텍스트</p>
+            <p>가격: 16,126원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2024/09/24/11/7/f342d095-0e8a-4d71-a3ea-f1d515ae4b87.jpg"
+            alt="의류사진7"
+          />
+          <div class="caption">
+            <h2>상품7</h2>
+            <p>상품7 설명 텍스트</p>
+            <p>가격: 17,127원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://cdn.011st.com/11dims/resize/2000x2000/quality/75/11src/pd/v2/8/2/3/3/2/4/LpIET/7218823324_B.jpg"
+            alt="의류사진8"
+          />
+          <div class="caption">
+            <h2>상품8</h2>
+            <p>상품8 설명 텍스트</p>
+            <p>가격: 18,128원</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://www.wishbucket.io/_next/image?url=https%3A%2F%2Fd2gfz7wkiigkmv.cloudfront.net%2Fpickin%2F2%2F1%2F2%2FCHJq-fnVTjCdy1WraDYrMA&w=1080&q=75"
+            alt="의류사진9"
+          />
+          <div class="caption">
+            <h2>상품9</h2>
+            <p>상품9 설명 텍스트</p>
+            <p>가격: 19,129원</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
