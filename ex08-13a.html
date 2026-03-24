@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자리배치도</title>
+    <style>
+      body {
+        width: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      table {
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+        margin-top: 20px;
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+      }
+      th,
+      tr {
+        background-color: antiquewhite;
+      }
+      tr:nth-of-type(even) td {
+        background-color: rgb(201, 240, 255);
+      }
+      div {
+        width: 40px;
+        height: 40px;
+        padding: 4px 0 0 0;
+        text-align: center;
+      }
+    </style>
+    <script>
+      const num = Number(prompt("총 인원은 몇명?"), 1);
+      const line = Number(prompt("한 줄에 몇명씩 앉을거?"), 1);
+    </script>
+  </head>
+  <body>
+    <script>
+      let list = `<h1>자리배치도</h1><br/><table>`;
+      let count = 1;
+
+      for (let i = 0; i < num / line + 1; i++) {
+        list += `<tr>`;
+        for (let j = 0; j < line; j++) {
+          if (count <= num) {
+            list += `<td><div>${count}</div></td>`;
+            count++;
+          }
+        }
+        list += `</tr>`;
+      }
+      list += `</table>`;
+
+      document.body.innerHTML = list;
+    </script>
+  </body>
+</html>
