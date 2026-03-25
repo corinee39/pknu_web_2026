@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let list = `<h1>입력받은 값 합산하기</h1>`;
+
+      const start = +prompt("합산 시작값을 입력하세요.");
+      const end = +prompt("합산 끝값을 입력하세요.");
+      let sum = 0;
+
+      for (let i = start; i <= end; i++) {
+        sum += i;
+      }
+
+      list += `<h3>${start}부터 ${end}까지의 합은 ${sum}입니다.</h3>`;
+
+      document.body.innerHTML = list;
+    </script>
+  </body>
+</html>

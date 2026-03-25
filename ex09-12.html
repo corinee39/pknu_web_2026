@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주사위 시뮬레이션</title>
+    <style>
+      h2 {
+        text-align: center;
+      }
+      #box {
+        background-color: rgb(255, 247, 235);
+        width: 400px;
+        height: 450px;
+        margin: 30px auto;
+        padding: 40px 10px 40px 30px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-shadow: 10px 10px 20px rgba(66, 66, 66, 0.247);
+        border-radius: 2dvb;
+      }
+      #box > div {
+        height: 30px;
+        margin: 5px;
+        background-color: rgb(161, 199, 255);
+        box-shadow: 10px 10px 20px rgba(50, 42, 83, 0.164);
+        border-radius: 0 15px 15px 0;
+        position: relative;
+      }
+      table {
+        width: 400px;
+        margin: auto;
+      }
+      tr,
+      th,
+      td {
+        background-color: rgb(223, 251, 255);
+        color: #333;
+        box-shadow: 10px 10px 20px rgba(216, 216, 216, 0.5);
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        border: 1px solid white;
+        position: relative;
+      }
+      th {
+        background-color: rgb(190, 216, 255);
+      }
+      td:last-of-type {
+        background-color: rgb(179, 198, 228);
+      }
+      span {
+        position: absolute;
+        color: #333;
+        font-weight: bold;
+        font-size: 0.9rem;
+        display: block;
+        text-align: right;
+        right: 10px;
+        line-height: 1.7rem;
+        text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.432);
+      }
+      button {
+        background-color: rgb(255, 209, 149);
+        border: none;
+        padding: 10px 22px;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+      .btn {
+        text-align: center;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const epoch = 100000; // 횟수
+      const count = [0, 0, 0, 0, 0, 0];
+      let list = "";
+      let verf = "검증중";
+
+      for (let i = 0; i < epoch; i++) {
+        const dice = Math.floor(Math.random() * 6);
+        count[dice]++;
+      }
+
+      if (
+        epoch ==
+        count[0] + count[1] + count[2] + count[3] + count[4] + count[5]
+      ) {
+        verf = "검증완료";
+      } else {
+        verf = "검증이상";
+        alert("검증이상");
+      }
+
+      const count0 = ((count[0] / epoch) * 100).toFixed(2);
+      const count1 = ((count[1] / epoch) * 100).toFixed(2);
+      const count2 = ((count[2] / epoch) * 100).toFixed(2);
+      const count3 = ((count[3] / epoch) * 100).toFixed(2);
+      const count4 = ((count[4] / epoch) * 100).toFixed(2);
+      const count5 = ((count[5] / epoch) * 100).toFixed(2);
+
+      list = `<h2>주사위 시뮬레이션 ${epoch}회 (${verf})</h2><table>
+        <tr>
+            <th>주사위 눈</th>
+            <th>횟수</th>
+            <th>확률(%)</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>${count[0]}</td>
+            <td>${count0}%</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>${count[1]}</td>
+            <td>${count1}%</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>${count[2]}</td>
+            <td>${count2}%</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>${count[3]}</td>
+            <td>${count3}%</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>${count[4]}</td>
+            <td>${count4}%</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>${count[5]}</td>
+            <td>${count5}%</td>
+        </tr>
+        </table>
+        
+        <div id="box">
+            <div style="width: ${count0 * 4}%"><span>1 (${count0}%)</span></div>
+            <div style="width: ${count1 * 4}%"><span>2 (${count1}%)</span></div>
+            <div style="width: ${count2 * 4}%"><span>3 (${count2}%)</span></div>
+            <div style="width: ${count3 * 4}%"><span>4 (${count3}%)</span></div>
+            <div style="width: ${count4 * 4}%"><span>5 (${count4}%)</span></div>
+            <div style="width: ${count5 * 4}%"><span>6 (${count5}%)</span></div>
+        </div>`;
+
+      document.body.innerHTML = list;
+    </script>
+
+    <div class="btn">
+      <button onclick="location.reload(true)">새로고침</button>
+    </div>
+  </body>
+</html>
