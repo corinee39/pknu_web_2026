@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque iste
+      reprehenderit cupiditate, tempora, vero pariatur perspiciatis sit non
+      soluta voluptatibus recusandae tempore ex distinctio sint nisi magni natus
+      delectus fugit. Explicabo beatae error fuga necessitatibus consequatur
+      repellendus alias nostrum impedit iste sit odit quasi, eos aspernatur
+      natus minus! Aliquid nam officia quaerat aperiam aut, sint praesentium
+      rerum quae facilis commodi deleniti nemo a veritatis unde quisquam
+      explicabo omnis animi aspernatur doloremque eveniet sed. Reprehenderit
+      suscipit debitis libero accusamus magni cumque ducimus dicta, nam dolores
+      quisquam praesentium fuga nesciunt porro autem animi vel perspiciatis quos
+      in itaque numquam tempora reiciendis eveniet.
+    </div>
+    <script>
+      // 1. app의 텍스트 각 단어를 뽑아내어
+      // 2. 5자보다 긴 길이는 big이라는 곳에 담고
+      // 3. 5자보다 짧은 길이는 small에 담는다.
+      const text = document.querySelector("#app");
+      const str = text.textContent;
+
+      // 공백 기준으로 나누어 영문자 외 제거, 빈 문자열 제거
+      const words = str
+        .split(" ")
+        .map((v) => v.replace(/[^a-zA-Z\s]/g, ""))
+        .filter((v) => v.length > 0)
+        .reduce(
+          (acc, cur) => {
+            if (cur.length > 5) {
+              acc.big.push(cur);
+            }
+            acc.small.push(cur);
+            return acc;
+          },
+          { big: [], small: [] },
+        );
+      console.log(words);
+
+      console.log("big:", words.big);
+      console.log("small:", words.small);
+    </script>
+  </body>
+</html>
